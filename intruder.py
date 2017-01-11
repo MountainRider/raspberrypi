@@ -24,8 +24,8 @@ def main():
                     # Use festival to speak the message
                     os.system('echo "%s" | festival --tts' % message)
                     time.sleep(0.5)
-                counter = 0
                 # Wait up to 10 seconds for the motion to stop
+                counter = 0
                 while ms.motion_detected:
                     time.sleep(1.0)
                     counter += 1
